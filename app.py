@@ -10,6 +10,8 @@ CORS(app)  # Enable CORS for frontend access
 # Configure Gemini API
 GEMINI_API_KEY = "AIzaSyCy8eRWe0g_VHxSvZrhrrA1C7QcR0OYMHY"
 genai.configure(api_key=GEMINI_API_KEY)
+def home():
+    return "Flask app deployed successfully!"
 
 @app.route('/chat', methods=['POST'])
 def chat():
